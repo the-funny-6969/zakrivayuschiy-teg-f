@@ -1,1 +1,57 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+	--font-title: 'PressStart2P';
+	--font-main: 'Inter';
+	--font-weight-text: 400;
+	--font-weight-title: 785;
+	--grid-color: #d3d3d3;
+	--grid-gradient-start: #e7e7e7;
+	--grid-gradient-end: #1a1a1a;
+	--background-image:
+		repeating-linear-gradient(
+			90deg,
+			var(--grid-color) 0 2px,
+			transparent 2px 4px
+		),
+		repeating-linear-gradient(
+			180deg,
+			var(--grid-color) 0 2px,
+			transparent 2px 4px
+		),
+		linear-gradient(
+			180deg,
+			var(--grid-gradient-start) 0.01%,
+			var(--grid-gradient-end) 100%
+		);
+	--header-vertical-padding: clamp(122px, 110.8px + 2.46vw, 130px);
+	--block-width: clamp(375px, 100%, 700px);
+	--header-title-font-size-desktop: min(13.07vw, clamp(49px, 30.5px + 4.92vw, 65px));
+	--header-subtitle-font-size-desktop: clamp(14px, 3.6px + 2.77vw, 23px);
+	--header-title-font-size-mobile: 49px;
+	--header-subtitle-font-size-mobile: 14px;
+	--header-title-font-size: var(--header-title-font-size-desktop);
+	--header-subtitle-font-size: var(--header-subtitle-font-size-desktop);
+	--block-gap: 50px;
+	--card-title-font-weight: 785;
+	--image-label-shadow-color: white;
+	--card-content-gap: 25px;
+	--save-button-width: 335px;
+	--save-button-icon-size: 21px;
+	--button-font-size: 14px;
+	--dialog-width: 353px;
+	--button-text-color: white;
+	--button-fill-color: black;
+	--contour-color: black;
+	--animation-fill-color: red;
+}
+
+@media (width <= 375px) {
+	:root {
+		--header-title-font-size: var(--header-title-font-size-mobile);
+		--header-subtitle-font-size: var(--header-subtitle-font-size-mobile);
+		--block-gap: 52px;
+		--save-button-width: 306px;
+		--save-button-icon-size: 28px;
+	}
+}

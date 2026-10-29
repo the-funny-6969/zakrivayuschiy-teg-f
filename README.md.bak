@@ -1,0 +1,1 @@
+git@github.com:the-funny-6969/slozhno-sosredotochitsya-fd.git
