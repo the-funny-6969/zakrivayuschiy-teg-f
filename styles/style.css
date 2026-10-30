@@ -13,7 +13,7 @@
 .page {
 	min-inline-size: 320px;
 	min-block-size: 100dvb;
-	font-family: var(--font-main, sans-serif);
+	font-family: var(--font-main, sans-serif), sans-serif;
 	font-variation-settings: 'wght' var(--font-weight-text);
 	background-image: var(--background-image);
 	background-attachment: fixed;
@@ -38,8 +38,8 @@
 	gap: 20px;
 	justify-items: center;
 	align-items: center;
-	font-family: var(--font-title);
-	font-weight: regular;
+	font-family: var(--font-title, monospace), monospace;
+	font-weight: normal;
 	text-transform: uppercase;
 }
 
@@ -58,7 +58,7 @@
 	inline-size: var(--block-width);
 }
 
-ul {
+.card-list {
 	display: grid;
 	gap: var(--block-gap);
 	inline-size: 100%;
@@ -85,11 +85,13 @@ ul {
 	inline-size: 100%;
 	block-size: auto;
 	object-fit: cover;
+	aspect-ratio: 1 / 1;
+	object-position: center;
 }
 
 .card-image-label {
 	position: absolute;
-	font-family: var(--font-title);
+	font-family: var(--font-title, monospace), monospace;
 	color: black;
 	font-size: 14px;
 	line-height: 1.5;
@@ -175,7 +177,7 @@ ul {
 	position: relative;
 	background-color: var(--button-fill-color);
 	color: var(--button-text-color);
-	font-family: var(--font-title);
+	font-family: var(--font-title, monospace), monospace;
 	font-size: var(--button-font-size);
 	mix-blend-mode: difference;
 }
@@ -206,6 +208,7 @@ ul {
 	cursor: pointer;
 	justify-self: center;
 	block-size: initial;
+	margin-bottom: 100px;
 }
 
 .save-button-icon {
@@ -260,14 +263,15 @@ dialog[open] .modal-content {
 
 .modal-text {
 	color: black;
-	font-family: var(--font-title);
+	font-family: var(--font-title, monospace), monospace;
 	font-size: 14px;
 	text-transform: uppercase;
 	line-height: 150%;
 }
 
-.button-ok {
+.button-close-modal {
 	inline-size: 100%;
+	text-transform: uppercase;
 }
 
 .filter-desaturate {
